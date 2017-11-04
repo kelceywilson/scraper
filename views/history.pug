@@ -1,0 +1,10 @@
+extends layout
+
+block main
+  p Hi!
+  div    
+    each search in history
+      div.searchHistory
+        p= search.search_term
+        p= search.created_at
+  

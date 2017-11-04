@@ -1,0 +1,31 @@
+body {
+
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 8000px;
+  margin: 0 20px 20px;
+}
+
+.error {
+  color: red
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  /*flex-direction: column;*/
+}
+
+.searchHistory {
+  display: flex;
+  flex-direction: row;
+}
+/*.flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}*/

@@ -1,0 +1,39 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "export NODE_ENV='test' && mocha",
+    "db:create": "createdb scraper && psql scraper < db/schema.sql",
+    "db:reset": "dropdb scraper && npm run db:create"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelceywilson/scraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelceywilson/scraper/issues"
+  },
+  "homepage": "https://github.com/kelceywilson/scraper#readme",
+  "devDependencies": {
+    "arrow-mocha": "^1.0.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "pg-promise": "^7.2.1",
+    "pug": "^2.0.0-rc.4"
+  }
+}

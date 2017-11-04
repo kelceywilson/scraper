@@ -1,0 +1,22 @@
+extends layout
+
+block main
+  if name
+    div.center
+      h1 Search Engine
+        form(class='center' action='/search', method='POST')
+          input(type='text', name='searchTerm', placeholder='Search ...')
+          button(type='submit') Search
+        form(class='center' action='/history', method='GET')
+          button(type='submit') Search History
+  else
+    p Hello! Please sign in or create a new account
+    if error
+      p.error #{error}!
+    form(id='loginForm' action='/login', method='POST')
+      label Please enter your name:
+        input(type='text', name='email')
+      label Please enter your password:
+        input(type='password', name='password')
+      button(type='submit', name='choice', value='login_user') Log In
+      button(type='submit', name='choice', value='add_user') Add User
